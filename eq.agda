@@ -6,10 +6,13 @@ open import level
 -- datatypes
 ----------------------------------------------------------------------
 
-data _≡_ {ℓ} {A : Set ℓ} (x : A) : A → Set ℓ where
+data _≡_ {ℓ : Level} {A : Set ℓ} (x : A) : A → Set ℓ where
   refl : x ≡ x
 
 {-# BUILTIN EQUALITY _≡_ #-}
+
+data _≡2_ {ℓ : Level} {A : Set ℓ} : A → A → Set ℓ where
+  refl2 : ∀ (x : A) → x ≡2 x
 
 ----------------------------------------------------------------------
 -- syntax

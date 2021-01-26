@@ -55,7 +55,8 @@ _||_ : 𝔹 → 𝔹 → 𝔹
 tt || b = tt
 ff || b = b
 
-if_then_else_ : ∀ {ℓ} {A : Set ℓ} → 𝔹 → A → A → A
+-- the operator is  polymorphic 
+if_then_else_ : ∀ {ℓ : Level} {A : Set ℓ} → 𝔹 → A → A → A
 if tt then y else z = y
 if ff then y else z = z
 
